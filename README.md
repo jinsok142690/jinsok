@@ -1,63 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Replica</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="unique_logo.png" alt="Unique Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Series</a></li>
-                    <li><a href="#">Películas</a></li>
-                    <li><a href="#">Novedades populares</a></li>
-                    <li><a href="#">Mi lista</a></li>
-                </ul>
-            </nav>
-            <div class="user">
-                <button class="btn btn-signin">Iniciar sesión</button>
-            </div>
-        </div>
-    </header>
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <section class="hero">
-        <div class="container">
-            <h1>Películas y series ilimitadas y mucho más.</h1>
-            <p>Disfruta donde quieras. Cancela cuando quieras.</p>
-            <button class="btn btn-primary">Probar ahora</button>
-        </div>
-    </section>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+}
 
-    <section class="content">
-        <div class="container">
-            <h2>Series y películas populares</h2>
-            <div class="movies">
-                <div class="movie">
-                    <img src="movie1.jpg" alt="Movie 1">
-                </div>
-                <div class="movie">
-                    <img src="movie2.jpg" alt="Movie 2">
-                </div>
-                <div class="movie">
-                    <img src="movie3.jpg" alt="Movie 3">
-                </div>
-                <!-- Repetir para más películas -->
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Netflix. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
+.navbar {
+    background-color: #111;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    width: 120px;
+    height: auto;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar nav ul li {
+    margin-right: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #e50914; /* Color rojo de Netflix */
+}
+
+.navbar .user {
+    margin-left: auto;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-signin {
+    background-color: #e50914;
+    color: #fff;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('hero_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #e50914;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.content {
+    padding: 50px 0;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
